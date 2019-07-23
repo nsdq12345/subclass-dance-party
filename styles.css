@@ -50,6 +50,18 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+.white-dancer{
+  border:10px solid white;
+  border-radius:50px; 
+  position:absolute;
+}
+
+.red-dancer{
+  border:10px solid red;
+  border-radius:50px; 
+  position:absolute;
+}
+
 .addLeftButton{
   padding:5px 12px;
   float: left;
