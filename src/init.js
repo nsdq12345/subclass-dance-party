@@ -43,8 +43,13 @@ $(document).ready(function() {
     //console.log("Dancer counter" + window.dancers.length);
     for (var i = 0; i < window.dancers.length; i++) {
       //window.dancers[i].lineUp()
+      window.dancers[i].left = 0 
       window.dancers[i].setPosition(window.dancers[i].top, 0);
     }    
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].touch();
+    }   
   });
 });
 

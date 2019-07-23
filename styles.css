@@ -5,6 +5,9 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url('pattern.jpg');
+  background-size: cover;
+
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -27,15 +30,25 @@ body, a:link, a:visited, a:active{
 }
 
 .blinky-dancer{
-  border:10px solid green;
+  /*border:10px solid green;
   border-radius:50px; 
+  position:absolute;*/
+
+
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid yellow;
   position:absolute;
+  transform: rotate(45deg);
 }
 
 .pop-dancer{
   border:10px solid yellow;
   border-radius:50px; 
   position:absolute;
+
 }
 
 .bouncy-dancer{

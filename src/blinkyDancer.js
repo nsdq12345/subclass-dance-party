@@ -21,11 +21,13 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps){
     //console.log("BlinkyThis: " + this);  
     Dancer.call(this, top, left, timeBetweenSteps);
-    // this.top = top;
-    // this.left = left; 
+    this.top = top;
+    this.left = left; 
     // this.timeBetweenSteps = timeBetweenSteps;
     //this.oldStep = this.step;
     this.$node.addClass('blinky-dancer');
+    this.$node.removeClass('dancer');
+    this.counter = 0; 
 }
 
 makeBlinkyDancer.prototype = Object.create(Dancer.prototype);
@@ -37,4 +39,15 @@ makeBlinkyDancer.prototype.step = function(){
     //oldStep();
     Dancer.prototype.step.call(this);
     this.$node.toggle(); 
+
+
+    if (this.counter == 36) {
+        this.counter = 0;
+    }
+    var styleSettings = {transform: 'rotate(' + 10*this.counter + 'deg)'};
+    this.$node.css(styleSettings);
+    this.counter++
 }
+
+
+//transform: rotate(45deg);
