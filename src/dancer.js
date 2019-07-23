@@ -43,6 +43,7 @@ Dancer.prototype.step = function() {
 };
 
 
+
 Dancer.prototype.setPosition = function(top, left) {
   var styleSettings = {
     top: top,
@@ -51,5 +52,14 @@ Dancer.prototype.setPosition = function(top, left) {
   //console.log("CSS: " + this.top);
   this.$node.css(styleSettings);
 }
+
+Dancer.prototype.lineUp = function(){
+  var styleSettings = {
+    left: 0,
+  };
+  this.$node.css(styleSettings);
+}
+
+
 
 

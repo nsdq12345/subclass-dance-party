@@ -4,6 +4,7 @@ var makeBouncyDancer = function(top, left, timeBetweenSteps) {
     this.top = top;
     this.left = left; 
     this.timeBetweenSteps = timeBetweenSteps;
+    this.$node.addClass('bouncy-dancer');
 }
 
 makeBouncyDancer.prototype = Object.create(Dancer.prototype);
@@ -15,7 +16,6 @@ makeBouncyDancer.prototype.step = function(){
     //console.log(typeof oldStep);
     //var oldStep = this.step;
     oldStep();
-    console.log(this);
     
     this.$node.toggle(); 
 }

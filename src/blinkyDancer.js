@@ -25,6 +25,7 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps){
     // this.left = left; 
     // this.timeBetweenSteps = timeBetweenSteps;
     //this.oldStep = this.step;
+    this.$node.addClass('blinky-dancer');
 }
 
 makeBlinkyDancer.prototype = Object.create(Dancer.prototype);
@@ -34,7 +35,6 @@ makeBlinkyDancer.prototype.step = function(){
     //var oldStep = Dancer.prototype.step.bind(this); 
     //var oldStep = this.step;
     //oldStep();
-
     Dancer.prototype.step.call(this);
     this.$node.toggle(); 
 }

@@ -25,3 +25,37 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.blinky-dancer{
+  border:10px solid green;
+  border-radius:50px; 
+  position:absolute;
+}
+
+.pop-dancer{
+  border:10px solid yellow;
+  border-radius:50px; 
+  position:absolute;
+}
+
+.bouncy-dancer{
+  border:10px solid purple;
+  border-radius:50px; 
+  position:absolute;
+}
+
+.big-dancer{
+  border:10px solid blue;
+  border-radius:50px; 
+  position:absolute;
+}
+
+.addLeftButton{
+  padding:5px 12px;
+  float: left;
+}
+
+
+.left-align{
+  left: 0px;
+}

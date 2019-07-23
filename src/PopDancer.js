@@ -3,6 +3,7 @@ var makePopDancer = function(top, left, timeBetweenSteps) {
     this.top = top;
     this.left = left; 
     this.timeBetweenSteps = timeBetweenSteps;
+    this.$node.addClass('pop-dancer');
 }
 
 makePopDancer.prototype = Object.create(Dancer.prototype);
@@ -14,6 +15,5 @@ makePopDancer.prototype.step = function(){
     //console.log(typeof oldStep);
     //var oldStep = this.step;
     oldStep();
-    console.log(this);
     this.$node.toggle(); 
 }
