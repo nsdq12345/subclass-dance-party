@@ -60,31 +60,31 @@ Dancer.prototype.lineUp = function(){
     left: 0,
   };
   this.$node.css(styleSettings);
+  this.left = 0;
 }
+
+Dancer.prototype.distance = function (x1, y1, x2, y2){
+  var diff = function(num1, num2){
+  if (num1 > num2){
+    return (num1 - num2);
+  }else{
+    return (num2 - num1);
+  }
+  }
+  var deltaX = diff(x1, x2);
+  var deltaY = diff(y1, y2);
+  var dist = Math.sqrt(Math.pow((deltaX), 2) + Math.pow((deltaY), 2));
+  return dist; 
+};
 
 Dancer.prototype.touch = function() {
   var coordinates = [];
-
-  var diff = function(num1, num2){
-    if (num1 > num2){
-      return (num1 - num2);
-    }else{
-      return (num2 - num1);
-    }
-  }
-
-  var distance = function (x1, y1, x2, y2){
-    var deltaX = diff(x1, x2);
-    var deltaY = diff(y1, y2);
-    var dist = Math.sqrt(Math.pow((deltaX), 2) + Math.pow((deltaY), 2));
-    return dist; 
-  };
 
   for (var i = 0; i < window.dancers.length; i++) {
     coordinates.push([window.dancers[i].left, window.dancers[i].top]);
   }
   for (var i = 0; i < coordinates.length; i++){
-    var dist = distance(coordinates[i][0], coordinates[i][1], this.left, this.top);
+    var dist = this.distance(coordinates[i][0], coordinates[i][1], this.left, this.top);
   
     if (dist <35 && dist > 0){
       console.log(dist);

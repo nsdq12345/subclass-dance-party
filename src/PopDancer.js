@@ -20,18 +20,18 @@ makePopDancer.prototype.step = function(){
     //var oldStep = this.step;
     oldStep();
     
-    if (this.counter == 5) {
+    if (this.counter == 6) {
         this.counter = 1;
         this.isUp = !this.isUp;
     }
 
     if (this.isUp) {
         // var styleSettings = {border: '100px solid yellow'};
-        var styleSettings = {transform: 'scale(' + 2 * this.counter+ ')'};
+        var styleSettings = {transform: 'scale(' + 1 * this.counter+ ')'};
         this.$node.css(styleSettings);
     } else {
         //var styleSettings = {border: '10px solid yellow'};
-        var styleSettings = {transform: 'scale(' + 0.5 * (1/this.counter+1) + ')'};
+        var styleSettings = {transform: 'scale(' + 1 * (1/this.counter+1) + ')'};
         this.$node.css(styleSettings);
     }
 
